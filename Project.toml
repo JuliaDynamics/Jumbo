@@ -1,33 +1,29 @@
 name = "Jumbo"
 version = "26.4.12"
-authors = ["Janis Erdmanis <janiserdmanis@protonmail.ch>"]
+authors = ["Janis Erdmanis <janiserdmanis@protonmail.ch>", "George Datseris"]
 
 [deps]
-AlgebraOfGraphics = "cbdf2221-f076-402e-a563-3d30da359d67"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
 Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
-Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
-Infiltrator = "5903a43b-9cc3-4c30-8d17-598619ec4e9b"
-Integrals = "de52edbc-65ea-441a-8357-d3a637375a31"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
-JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
-Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
-ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
-Mooncake = "da2b9cff-9c12-43a0-ae48-6db2b0edb7d6"
-NonlinearSolve = "8913a72c-1f9b-4ce2-8d82-65094dcecaec"
-Optim = "429524aa-4258-5aef-a3af-852621145aeb"
-OrdinaryDiffEqCore = "bbf590c4-e513-4bbe-9b18-05decba2e5d8"
-Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
-Turing = "fce5fe82-541a-59a6-adf8-730c64b5f9a0"
-WGLMakie = "276b4fcb-3e11-5398-bf8b-a0c2d153d008"
+OrdinaryDiffEqVerner = "79d7bb75-1356-48c1-b8c0-6832512096c2"
+Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+DynamicalSystems = "61744808-ddfa-5f27-97ff-6e42cc95d634"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+Agents = "46ada45e-f475-11e8-01d0-f70cc89e6671"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+LsqFit = "2fda8390-95c7-5789-9bda-21331edee243"
+NetworkDynamics = "22e9dc34-2a0d-11e9-0de0-8588d035468b"
+GlobalSensitivity = "af5da776-676b-467e-8baf-acd8249e4f0f"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 
 [compat]
 JSON = "1"
-Revise = "3.14"
 
 [extras]
 AppBundler = "40eb83ae-c93a-480c-8f39-f018b568f472"
