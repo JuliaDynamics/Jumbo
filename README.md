@@ -1,5 +1,7 @@
 # Jumbo
 
+**Note: this is a fork whose `Project.toml` is modified to target package specifically for nonlinear and complex systems modelling, analysis, and timeseries analysis. The rest of the README remains identical to the original one.**
+
 Jumbo is a Julia distribution that comes with commonly needed scientific packages out of the box. Start using Makie, DifferentialEquations, or any included package immediately - no compilation wait. Additional packages can be installed via Pkg without triggering recompilation of pre-installed packages.
 
 This repository also serves as a template for creating custom Julia distributions tailored to your needs. Fork it, modify the `Project.toml` to include your preferred packages, and run the "Build Release Assets" GitHub Actions workflow to generate installers for Linux, macOS, and Windows. The distribution format uses a `Project.toml` with `name` and `version` fields - bundling all listed packages and dependencies into the stdlib path to prevent accidental recompilations.
