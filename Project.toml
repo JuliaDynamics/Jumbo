@@ -1,5 +1,5 @@
 name = "Jumbo"
-version = "26.4.12"
+version = "27.0.0"
 authors = ["Janis Erdmanis <janiserdmanis@protonmail.ch>", "George Datseris"]
 
 [deps]
@@ -9,6 +9,7 @@ DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
 Graphs = "86223c79-3864-5bf0-83f7-82e725a168b6"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
 OrdinaryDiffEqVerner = "79d7bb75-1356-48c1-b8c0-6832512096c2"
 Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
@@ -19,7 +20,6 @@ Agents = "46ada45e-f475-11e8-01d0-f70cc89e6671"
 ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
 LsqFit = "2fda8390-95c7-5789-9bda-21331edee243"
 NetworkDynamics = "22e9dc34-2a0d-11e9-0de0-8588d035468b"
-GlobalSensitivity = "af5da776-676b-467e-8baf-acd8249e4f0f"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 
 [compat]
