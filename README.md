@@ -16,7 +16,7 @@ To install Jumbo, download the appropriate pre-built distribution (MSIX, Snap, o
 
 Note that all these extra steps are avoidable with investment in Windows and macOS code signing certificates. For Snap, one can try to submit the app to a snap store so it can be installed with a GUI.
 
-## Building
+## Building locally (host platform)
 
 To run the build, install Julia 1.13 or later.
 Then, change directory into the `Jumbo` folder and execute the following commands:
@@ -36,18 +36,12 @@ This creates build artifacts in the `build` directory. By default, the bundle ta
 
 Builds can also be performed with GitHub Actions. The release workflow runs each bundle on a compatible runner and uploads the resulting artifacts. It can be started manually or runs when a release is created.
 
-## Building for Other Platforms
+## Building for multiple platforms (GitHub CI)
 
-AppBundler does not generally cross-compile bundles for an operating system that is different from the host operating system. Build each bundle on a compatible host, or use the GitHub Actions workflow:
+Generally, the recommended steps for creating a custom Jumbo distribution are:
 
-- macOS builds, including DMG bundles, require macOS.
-- Linux builds, including Snap bundles, require Linux.
-- Windows builds, including MSIX bundles, require Windows.
+_Optionally:_
+1. Fork the repository.
+2. Update `Project.toml` and `Manifest.toml` with your own environment packages.
 
-The `--target-arch` option selects the CPU architecture for the current platform; it does not make an operating system bundle buildable from another operating system. For example, an `aarch64` DMG must be built on macOS.
-
-With this in mind, use this command to build for other platforms:
-
-```bash
-julia --startup-file=no --project=meta -m AppBundler build . --build-dir=build --target-arch=aarch64 --target-bundle=dmg -Djuliaimg_precompile=false --selfsign
-```
+_Then_ publish a release on GitHub. The **Build Release Assets** GitHub action will automatically create binaries for all platforms it can.

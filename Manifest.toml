@@ -2,7 +2,7 @@
 
 julia_version = "1.13.0"
 manifest_format = "2.1"
-project_hash = "134da57152d08807b71fe4f3a2a52f2eb7dabb34"
+project_hash = "8a6bf76ec119966eadd43ee2005eb7f5513a8cd4"
 
 [[deps.ADTypes]]
 deps = ["PrecompileTools"]
@@ -84,31 +84,6 @@ git-tree-sha1 = "7e651ea8d262d2d74ce75fdf47c4d63c07dba7a6"
 registries = "General"
 uuid = "35492f91-a3bd-45ad-95db-fcad7dcfedb7"
 version = "1.2.0"
-
-[[deps.Agents]]
-deps = ["CSV", "CommonSolve", "DataFrames", "DataStructures", "Distributed", "Distributions", "Downloads", "Graphs", "JLD2", "LazyArtifacts", "LightSumTypes", "LinearAlgebra", "MacroTools", "PrecompileTools", "ProgressMeter", "Random", "Rotations", "StaticArrays", "StatsBase", "StreamSampling", "StructArrays"]
-git-tree-sha1 = "a1dc1accb00efab2e4e3918584be01c6eb728be7"
-registries = "General"
-uuid = "46ada45e-f475-11e8-01d0-f70cc89e6671"
-version = "7.0.4"
-
-    [deps.Agents.extensions]
-    AgentsArrow = "Arrow"
-    AgentsGraphVisualizations = ["Makie", "GraphMakie"]
-    AgentsOSM = "LightOSM"
-    AgentsOSMVisualizations = ["Makie", "LightOSM", "OSMMakie"]
-    AgentsRL = ["Crux", "POMDPs", "Flux"]
-    AgentsVisualizations = "Makie"
-
-    [deps.Agents.weakdeps]
-    Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
-    Crux = "e51cc422-768a-4345-bb8e-2246287ae729"
-    Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
-    GraphMakie = "1ecd5474-83a3-4783-bb4f-06765db800d2"
-    LightOSM = "d1922b25-af4e-4ba3-84af-fe9bea896051"
-    Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
-    OSMMakie = "76b6901f-8821-46bb-9129-841bc9cfe677"
-    POMDPs = "a93abf59-7444-517b-a68a-c42f96afdd7d"
 
 [[deps.AliasTables]]
 deps = ["PtrArrays", "Random"]
@@ -400,23 +375,6 @@ git-tree-sha1 = "e329286945d0cfc04456972ea732551869af1cfc"
 registries = "General"
 uuid = "4e9b3aee-d8a1-5a3d-ad8b-7d824db253f0"
 version = "1.0.1+0"
-
-[[deps.CSV]]
-deps = ["CodecZlib", "DataStrings", "Dates", "Downloads", "Durations", "Mmap", "Parsers", "PooledArrays", "PrecompileTools", "Printf", "Tables", "Unicode"]
-git-tree-sha1 = "b5c1d7ec1595d9cca3f8b7b8879d3a372e6972be"
-registries = "General"
-uuid = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
-version = "1.0.0"
-
-    [deps.CSV.extensions]
-    CSVDataDecimalsExt = "DataDecimals"
-    CSVFilePathsBaseExt = "FilePathsBase"
-    CSVInlineStringsExt = "InlineStrings"
-
-    [deps.CSV.weakdeps]
-    DataDecimals = "3e2245cb-6932-498d-a7cf-39d39de8bde3"
-    FilePathsBase = "48062228-2e41-5def-b9a4-89aafe57970f"
-    InlineStrings = "842dd82b-1e85-43dc-bf29-5d0ee9dffc48"
 
 [[deps.Cairo]]
 deps = ["Cairo_jll", "Colors", "Glib_jll", "Graphics", "Libdl", "Pango_jll"]
@@ -711,12 +669,6 @@ registries = "General"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 version = "1.8.2"
 
-[[deps.DataStrings]]
-git-tree-sha1 = "b8032263d364177a0b192ea15f277df4e6ab07e2"
-registries = "General"
-uuid = "48204bd6-5611-42ea-b167-fc1d713f9be2"
-version = "1.1.0"
-
 [[deps.DataStructures]]
 deps = ["OrderedCollections"]
 git-tree-sha1 = "b0bc6d2cad1fed8b7fd59a1551a991cb3d2809e6"
@@ -949,19 +901,6 @@ version = "0.9.5"
 deps = ["ArgTools", "FileWatching", "LibCURL", "NetworkOptions"]
 uuid = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 version = "1.7.0"
-
-[[deps.Durations]]
-deps = ["Dates"]
-git-tree-sha1 = "a2f9c974a78a23661f0e41d0b80b687f844c018e"
-registries = "General"
-uuid = "41ac09f5-0a95-4810-aa18-c88bf48ee130"
-version = "1.2.0"
-
-    [deps.Durations.extensions]
-    DurationsArrowExt = "Arrow"
-
-    [deps.Durations.weakdeps]
-    Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
 
 [[deps.DynamicalSystems]]
 deps = ["Attractors", "ChaosTools", "ComplexityMeasures", "DataStructures", "DelayEmbeddings", "DynamicalSystemsBase", "FractalDimensions", "PeriodicOrbits", "PredefinedDynamicalSystems", "RecurrenceAnalysis", "RecurrenceMicrostatesAnalysis", "Reexport", "SignalDecomposition", "StateSpaceSets", "Statistics", "TimeseriesSurrogates"]
@@ -1415,13 +1354,6 @@ git-tree-sha1 = "4f84db415ccb0ea750b10738bfecdd55388fd1b6"
 registries = "General"
 uuid = "e91730f6-4275-51fb-a7a0-7064cfbd3b39"
 version = "0.7.0"
-
-[[deps.HybridStructs]]
-deps = ["Accessors", "MacroTools", "PrecompileTools"]
-git-tree-sha1 = "dd1f40c880a18c0a59103dec2df0ca7a3aeeb25e"
-registries = "General"
-uuid = "49057fa9-d513-5ef6-ae80-2dc68a70a2bd"
-version = "0.2.1"
 
 [[deps.HypergeometricFunctions]]
 deps = ["Gamma", "LinearAlgebra"]
@@ -1888,13 +1820,6 @@ git-tree-sha1 = "d620582b1f0cbe2c72dd1d5bd195a9ce73370ab1"
 registries = "General"
 uuid = "38a345b3-de98-5d2b-a5d3-14cd9215e700"
 version = "2.42.0+0"
-
-[[deps.LightSumTypes]]
-deps = ["MacroTools", "PrecompileTools"]
-git-tree-sha1 = "a42e706a520af0c7d560dedbe4cded3a9b4356f0"
-registries = "General"
-uuid = "f56206fc-af4c-5561-a72a-43fe2ca5a923"
-version = "5.2.2"
 
 [[deps.LineSearch]]
 deps = ["ADTypes", "CommonSolve", "ConcreteStructs", "FastClosures", "LinearAlgebra", "MaybeInplace", "PrecompileTools", "SciMLBase", "SciMLJacobianOperators", "StaticArraysCore"]
@@ -2475,13 +2400,6 @@ weakdeps = ["Markdown", "ProgressMeter"]
     MarkdownExt = "Markdown"
     ProgressMeterExt = "ProgressMeter"
 
-[[deps.OnlineStatsBase]]
-deps = ["AbstractTrees", "Dates", "LinearAlgebra", "OrderedCollections", "Statistics", "StatsBase"]
-git-tree-sha1 = "55c519dfadb4d47970f5cd13bab27e640731598e"
-registries = "General"
-uuid = "925886fa-5bf2-5e8e-b522-a9147a512338"
-version = "1.7.3"
-
 [[deps.OpenBLASConsistentFPCSR_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl"]
 git-tree-sha1 = "38a93f17e431141c6470bb67a88952a7c4f0e928"
@@ -2854,13 +2772,6 @@ version = "2.11.3"
     [deps.QuadGK.weakdeps]
     Enzyme = "7da242da-08ed-463a-9acd-ee780be4f1d9"
 
-[[deps.Quaternions]]
-deps = ["LinearAlgebra", "Random", "RealDot"]
-git-tree-sha1 = "4d8c1b7c3329c1885b857abb50d08fa3f4d9e3c8"
-registries = "General"
-uuid = "94ee1d12-ae83-5a48-8b1c-48b8ff168ae0"
-version = "0.7.7"
-
 [[deps.REPL]]
 deps = ["Base64", "Dates", "FileWatching", "InteractiveUtils", "JuliaSyntaxHighlighting", "Markdown", "Sockets", "StyledStrings", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
@@ -2887,13 +2798,6 @@ weakdeps = ["FixedPointNumbers"]
 
     [deps.Ratios.extensions]
     RatiosFixedPointNumbersExt = "FixedPointNumbers"
-
-[[deps.RealDot]]
-deps = ["LinearAlgebra"]
-git-tree-sha1 = "9f0a1b71baaf7650f4fa8a1d168c7fb6ee41f0c9"
-registries = "General"
-uuid = "c1ae055f-0cd5-4b69-90a6-9a35b1a98df9"
-version = "0.1.0"
 
 [[deps.RecipesBase]]
 deps = ["PrecompileTools"]
@@ -3027,17 +2931,6 @@ version = "2.3.0"
     SymPy = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
     SymPyPythonCall = "bc8888f7-b21e-4b7c-a06a-5d9c9496438c"
     Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
-
-[[deps.Rotations]]
-deps = ["LinearAlgebra", "Quaternions", "Random", "StaticArrays"]
-git-tree-sha1 = "5680a9276685d392c87407df00d57c9924d9f11e"
-registries = "General"
-uuid = "6038ab10-8711-5258-84ad-4b1120ba62dc"
-version = "1.7.1"
-weakdeps = ["RecipesBase"]
-
-    [deps.Rotations.extensions]
-    RotationsRecipesBaseExt = "RecipesBase"
 
 [[deps.RoundingEmulator]]
 git-tree-sha1 = "40b9edad2e5287e05bd413a38f61a8ff55b9557b"
@@ -3462,13 +3355,6 @@ git-tree-sha1 = "0ebc2c0670353f529e6b407a8a737692a622e5fd"
 registries = "General"
 uuid = "90dbc90e-856a-4131-af2c-e8c5aa0f35b5"
 version = "2.1.1"
-
-[[deps.StreamSampling]]
-deps = ["Accessors", "DataStructures", "Distributions", "HybridStructs", "OnlineStatsBase", "PrecompileTools", "Random", "StatsBase"]
-git-tree-sha1 = "2e700386c3b14bf9c857ecf3f28b9b5886ae3f0e"
-registries = "General"
-uuid = "ff63dad9-3335-55d8-95ec-f8139d39e468"
-version = "0.8.2"
 
 [[deps.StrideArraysCore]]
 deps = ["ArrayInterface", "CloseOpenIntervals", "IfElse", "LayoutPointers", "LinearAlgebra", "ManualMemory", "SIMDTypes", "Static", "StaticArrayInterface", "ThreadingUtilities"]
