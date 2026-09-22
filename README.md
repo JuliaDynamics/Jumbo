@@ -1,6 +1,6 @@
-# Jumbo
+> **Note: this is a fork of Jumbo whose `Project.toml` is modified to target package specifically for nonlinear and complex systems modelling, analysis, and timeseries analysis: the JuliaDynamics ecosystem and related packages.**
 
-**Note: this is a fork whose `Project.toml` is modified to target package specifically for nonlinear and complex systems modelling, analysis, and timeseries analysis. The rest of the README remains identical to the original one.**
+# Jumbo - JuliaDynamics version
 
 Jumbo is a Julia distribution that comes with commonly needed scientific packages out of the box. Start using Makie, DifferentialEquations, or any included package immediately - no compilation wait. Additional packages can be installed via Pkg without triggering recompilation of pre-installed packages.
 
@@ -18,25 +18,36 @@ Note that all these extra steps are avoidable with investment in Windows and mac
 
 ## Building
 
-To run the build, install Julia 1.11 or later and execute the following commands:
+To run the build, install Julia 1.13 or later.
+Then, change directory into the `Jumbo` folder and execute the following commands:
 ```bash
-julia --project=meta 
-]instantiate
+julia --startup-file=no --no-init --project=meta
+import Pkg; Pkg.update() # optional
+Pkg.instantiate()
 ```
 
-Once dependencies are installed, perform the build:
+Note that you may also need to run `Pkg.build("AppBundler")` depending on the configuration and status of the `Conda` installation in your system.
+
+Once dependencies are installed and compiled, perform the build:
 ```bash
-julia --project=meta -m AppBundler build . --build-dir=build --selfsign
+julia --startup-file=no --project=meta -m AppBundler build . --build-dir=build --selfsign
 ```
-This creates build artifacts in the `build` directory. By default, the bundle targets the host platform. 
+This creates build artifacts in the `build` directory. By default, the bundle targets the host platform.
 
-Builds can also be performed with GitLab via Build → Pipelines, where they can be started manually or are initiated when tagging a new release. Note that artifact upload to releases has not yet been tested.
+Builds can also be performed with GitHub Actions. The release workflow runs each bundle on a compatible runner and uploads the resulting artifacts. It can be started manually or runs when a release is created.
 
-## Cross-platform Builds
+## Building for Other Platforms
 
-You can create bundles for other platforms using command options:
+AppBundler does not generally cross-compile bundles for an operating system that is different from the host operating system. Build each bundle on a compatible host, or use the GitHub Actions workflow:
+
+- macOS builds, including DMG bundles, require macOS.
+- Linux builds, including Snap bundles, require Linux.
+- Windows builds, including MSIX bundles, require Windows.
+
+The `--target-arch` option selects the CPU architecture for the current platform; it does not make an operating system bundle buildable from another operating system. For example, an `aarch64` DMG must be built on macOS.
+
+With this in mind, use this command to build for other platforms:
+
 ```bash
-julia --project=meta -m AppBundler build . --build-dir=build --target-arch=aarch64 --target-bundle=dmg -Djuliaimg_precompile=false --selfsign
+julia --startup-file=no --project=meta -m AppBundler build . --build-dir=build --target-arch=aarch64 --target-bundle=dmg -Djuliaimg_precompile=false --selfsign
 ```
-
-This creates a bundle for the specified platform where precompilation will occur on the user's system at first launch.
