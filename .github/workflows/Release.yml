@@ -16,7 +16,6 @@ jobs:
     name: Build ${{ matrix.os }}-${{ matrix.arch }}
     runs-on: ${{ matrix.runner }}
     strategy:
-      fail-fast: false
       matrix:
         include:
           - runner: macos-latest
@@ -45,8 +44,6 @@ jobs:
       - uses: julia-actions/cache@v1
       - name: Install dependencies
         run: julia --project=meta -e 'using Pkg; Pkg.instantiate()'
-      - name: Install JuliaC
-        run: julia -e 'using Pkg; Pkg.Apps.add("JuliaC")'
       - name: Build
         env:
           PASSWORD: ${{ matrix.os == 'macos' && secrets.MACOS_PFX_PASSWORD || matrix.os == 'windows' && secrets.WINDOWS_PFX_PASSWORD || '' }}
