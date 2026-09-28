@@ -21,9 +21,9 @@ Note that all these extra steps are avoidable with investment in Windows and mac
 To run the build, install Julia 1.13 or later.
 Then, change directory into the `Jumbo` folder and execute the following commands:
 ```bash
-julia --startup-file=no --no-init --project=meta
+julia --startup-file=no --project=meta
 import Pkg; Pkg.update() # optional
-Pkg.instantiate()
+import Pkg; Pkg.instantiate()
 ```
 
 Note that you may also need to run `Pkg.build("AppBundler")` depending on the configuration and status of the `Conda` installation in your system.
